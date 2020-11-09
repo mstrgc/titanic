@@ -1,8 +1,18 @@
 from django.views.generic import CreateView
-from .models import person
 from .forms import personform
+from django.shortcuts import render, redirect
 
-class home(CreateView):
-	model = person
-	form_class = personform
-	template_name = 'home.html'
+def home(request):
+    if request.method == 'POST':
+        form = personform(request.POST)
+
+        if form.is_valid():
+            return redirect('titanicapp:answer')
+
+    else:
+        form = personform()
+
+    return render(request, 'index.html', {'form': form})
+
+def answer(request):
+    return render(request, 'answer.html', {})
