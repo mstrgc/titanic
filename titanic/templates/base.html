@@ -2,18 +2,14 @@
 {% load widget_tweaks %}
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
   <title>Titanic</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
-
    <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Montserrat:300,400,500,700" rel="stylesheet">
-
   <!-- Vendor CSS Files -->
   <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
   <link href="{% static 'assets/vendor/icofont/icofont.min.css" rel="stylesheet' %}">
@@ -23,10 +19,8 @@
   <link href="{% static 'assets/vendor/venobox/venobox.css' %}" rel="stylesheet">
   <link href="{% static 'assets/vendor/owl.carousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
   <link href="{% static 'assets/vendor/aos/aos.css' %}" rel="stylesheet">
-
   <!-- Template Main CSS File -->
   <link href="{% static 'assets/css/style.css' %}" rel="stylesheet">
-
   <!-- =======================================================
   * Template Name: BizPage - v3.1.1
   * Template URL: https://bootstrapmade.com/bizpage-bootstrap-business-template/
@@ -34,44 +28,38 @@
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
 </head>
-
 <body>
-
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top header-transparent">
     <div class="container-fluid">
-
       <div class="row justify-content-center">
         <div class="col-lg-11 d-flex align-items-center">
           <h1 class="logo mr-auto"><a href="{% url 'titanicapp:home' %}">Titanic</a></h1>
-          <!-- Uncomment below if you prefer to use an image logo -->
-          <!-- <a href="index.html" class="logo mr-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
-
           <nav class="nav-menu d-none d-lg-block">
             <ul>
               <li class="active"><a href="{% url 'titanicapp:home' %}">Home</a></li>
-              <li><a href="#about">About Us</a></li>
+              <li><a href="{% url 'titanicapp:about-us' %}">About Us</a></li>
             </ul>
           </nav><!-- .nav-menu -->
         </div>
       </div>
-
     </div>
   </header><!-- End Header -->
   <!-- block main-->
   {% block main %}{% endblock %}
   <!-- end block-->
-      <!-- ======= Footer ======= -->
+  <!-- ======= Footer ======= -->
   <footer id="footer">
     <div class="container">
       <div class="copyright">
         <strong>Titanic</strong>
       </div>
       <div class="credits">
-        Designed by <a href="https://bootstrapmade.com/">Parsa & Daniyal</a>
+        Created by <a href="{% url 'titanicapp:about-us' %}">Parsa & Daniyal</a>
       </div>
     </div>
-  </footer><!-- End Footer -->
+  </footer>
+  <!-- End Footer -->
   <!-- Vendor JS Files -->
   <script src="{% static 'assets/vendor/jquery/jquery.min.js' %}"></script>
   <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
@@ -82,7 +70,6 @@
   <script src="{% static 'assets/vendor/venobox/venobox.min.js' %}"></script>
   <script src="{% static 'assets/vendor/owl.carousel/owl.carousel.min.js' %}"></script>
   <script src="{% static 'assets/vendor/aos/aos.js' %}"></script>
-
   <!-- Template Main JS File -->
   <script src="{% static 'assets/js/main.js' %}"></script>
 </body>
