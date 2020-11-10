@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block main %}
+<section id="intro">
+	<div class="intro-container">
+	  <div id="introCarousel" class="carousel slide carousel-fade" data-ride="carousel">
+        <div class="carousel-inner" role="listbox">
+        	<div class="carousel-item active" style="background-image: url({% static 'assets/img/intro-carousel/ab.jpg' %})">
+        	<div class="carousel-container">
+            <div class="container row">
+            	<h2 class="col-md-12 text-center" style="color: #ff7900;">Titanic</h2>
+            	<h3 class="col-md-12 text-center text-light">Created By Parsa & Daniyal</h2>
+
+            	<div class="col-md-6 my-3 text-center">
+	      			  <p class="h5"><b>Contact Parsa</b></p>
+	      			  <p><i><i class="fa fa-envelope" aria-hidden="true"></i> parsabiglarykord5892@gmail.com</i></p>
+	      		    <p><a href="https://github.com/parsa5892"><i class="fa fa-github"></i> Parsa Github</a></p>
+	      		  </div>
+	      		  <div class="col-md-6 my-3 text-center">
+	      			  <p class="h5"><b>Contact Daniyal</b></p>
+	      			  <p><i><i class="fa fa-envelope" aria-hidden="true"></i> gcmstr@gmail.com</i></p>
+	      		  	<p><a href="https://github.com/mstrgc"><i class="fa fa-github"></i> Daniyal Github</a></p>
+	      		  </div>
+	    			</div>
+	  			</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+{% endblock %}
