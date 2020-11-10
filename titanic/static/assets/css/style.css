@@ -504,10 +504,10 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 16px;
   letter-spacing: 1px;
   display: inline-block;
-  padding: 8px 32px;
+  padding: 10px 40px;
   border-radius: 50px;
   transition: 0.5s;
-  margin: 8px;
+  margin: 10px;
   color: #fff;
   background: #18d26e;
 }
@@ -1653,4 +1653,8 @@ section {
   text-align: center;
   font-size: 13px;
   color: #ddd;
+}
+
+.fr {
+  border-radius: 50px !important;
 }
