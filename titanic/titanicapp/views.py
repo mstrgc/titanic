@@ -16,3 +16,6 @@ def home(request):
 
 def answer(request):
     return render(request, 'answer.html', {})
+
+def about(request):
+	return render(request, 'about.html')
