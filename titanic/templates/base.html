@@ -43,7 +43,7 @@
 
       <div class="row justify-content-center">
         <div class="col-lg-11 d-flex align-items-center">
-          <h1 class="logo mr-auto"><a href="index.html">Titanic</a></h1>
+          <h1 class="logo mr-auto"><a href="{% url 'titanicapp:home' %}">Titanic</a></h1>
           <!-- Uncomment below if you prefer to use an image logo -->
           <!-- <a href="index.html" class="logo mr-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
@@ -58,48 +58,32 @@
 
     </div>
   </header><!-- End Header -->
-
-  <!-- ======= Intro Section ======= -->
-  <section id="intro">
-    <div class="intro-container">
-      <div id="introCarousel" class="carousel slide carousel-fade" data-ride="carousel">
-
-        <ol class="carousel-indicators"></ol>
-
-        <div class="carousel-inner" role="listbox">
-
-          <div class="carousel-item active" style="background-image: url({% static 'assets/img/intro-carousel/1.jpg' %})">
-            <div class="carousel-container">
-              <div class="container row">
-                <div class="col-md-6 text-left">
-                  <h1 class="d-block logo float-left animate__animated animate__fadeInUp"><a href="index.html">Titanic</a></h1>
-                  <br>
-                  <br>
-                  <br>
-                  <p class="h4 animate__animated animate__fadeInUp">You are one of the passengers of the Titanic.</p>
-                  <p class="text-danger h4 animate__animated animate__fadeInUp">Will you die or will you survive?</p>
-                  <p class="h4 animate__animated animate__fadeInUp">Try it!</p>
-                </div>
-                <div class="col-md-6">
-                  <form>
-                    {% csrf_token %}
-                    <label class="h5 text-light float-left my-3 mx-3 animate__animated animate__fadeInUp">{{form.name.label}}</label>
-                    {{form.name|add_class:"form-control mx-3 animate__animated animate__fadeInUp"}}
-                    <label class="h5 text-light float-left my-3 mx-3 animate__animated animate__fadeInUp">{{form.age.label}}</label>
-                    {{form.age|add_class:"form-control mx-3 animate__animated animate__fadeInUp"}}
-                    <label class="h5 text-light float-left my-3 mx-3 animate__animated animate__fadeInUp">{{form.sex.label}}</label>
-                    {{form.sex|add_class:"form-control mx-3 animate__animated animate__fadeInUp"}}
-                    <a href="#featured-services" class="mt-4 btn-get-started scrollto animate__animated animate__fadeInUp">Start Machine</a>
-                  </form>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+  <!-- block main-->
+  {% block main %}{% endblock %}
+  <!-- end block-->
+      <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="container">
+      <div class="copyright">
+        <strong>Titanic</strong>
+      </div>
+      <div class="credits">
+        Designed by <a href="https://bootstrapmade.com/">Parsa & Daniyal</a>
       </div>
     </div>
-  </section><!-- End Intro Section -->
+  </footer><!-- End Footer -->
+  <!-- Vendor JS Files -->
+  <script src="{% static 'assets/vendor/jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/jquery.easing/jquery.easing.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/waypoints/jquery.waypoints.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/counterup/counterup.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/venobox/venobox.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/owl.carousel/owl.carousel.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/aos/aos.js' %}"></script>
 
-  <main id="main">
+  <!-- Template Main JS File -->
+  <script src="{% static 'assets/js/main.js' %}"></script>
 </body>
-</html
+</html>

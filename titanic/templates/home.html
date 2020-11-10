@@ -1,5 +1,41 @@
-<form method="post">
-{% csrf_token %}
-{{ form }}
-<button type="submit">send</button>
-</form>
+{% extends 'base.html' %}
+{% load static %}
+{% load widget_tweaks %}
+{% block main %}
+<section id="intro">
+<div class="intro-container">
+  <div id="introCarousel" class="carousel slide carousel-fade" data-ride="carousel">
+    <ol class="carousel-indicators"></ol>
+    <div class="carousel-inner" role="listbox">
+      <div class="carousel-item active" style="background-image: url({% static 'assets/img/intro-carousel/1.jpg' %})">
+        <div class="carousel-container">
+          <div class="container row">
+            <div class="col-md-6 text-left">
+              <h1 style="color: #18d26e !important;" class="d-block float-left animate__animated animate__fadeInUp">Titanic</h1>
+              <br>
+              <br>
+              <br>
+              <p class="h4 animate__animated animate__fadeInUp">You are one of the passengers of the Titanic.</p>
+              <p class="text-danger h4 animate__animated animate__fadeInUp">Will you die or will you survive?</p>
+              <p class="h4 animate__animated animate__fadeInUp">Try it!</p>
+            </div>
+            <div class="col-md-6">
+              <form method="post">
+                {% csrf_token %}
+                <label class="h5 text-light float-left my-3 mx-3 animate__animated animate__fadeInUp">{{form.name.label}}</label>
+                {{form.name|add_class:"text-dark fr form-control mx-3 animate__animated animate__fadeInUp"}}
+                <label class="h5 text-light float-left my-3 mx-3 animate__animated animate__fadeInUp">{{form.age.label}}</label>
+                {{form.age|add_class:"text-dark fr form-control mx-3 animate__animated animate__fadeInUp"}}
+                <label class="h5 text-light float-left my-3 mx-3 animate__animated animate__fadeInUp">{{form.sex.label}}</label>
+                {{form.sex|add_class:"text-dark fr form-control mx-3 animate__animated animate__fadeInUp"}}
+                <button type="submit" class="scrollto animate__animated animate__fadeInU border-0 my-5 btn-get-started">Start Machine</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+{% endblock %}
