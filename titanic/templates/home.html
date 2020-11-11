@@ -10,7 +10,7 @@
         <div class="carousel-container">
           <div class="container row">
             <div class="col-md-6 text-left">
-              <h1 style="color: #FF7900 !important;" class="d-block float-left animate__animated animate__fadeInUp">Titanic</h1>
+              <h1 class="orange d-block float-left animate__animated animate__fadeInUp">Titanic</h1>
               <br>
               <br>
               <br>
@@ -19,13 +19,13 @@
               <p class="h4 animate__animated animate__fadeInUp">Try it!</p>
             </div>
             <div class="col-md-6">
-              <form method="post">
+              <form method="post" action="{% url 'titanicapp:answer' %}">
                 {% csrf_token %}
-                <label class="h5 text-light float-left my-3 mx-3 animate__animated animate__fadeInUp">{{form.name.label}}</label>
+                <label class="orange h5 text-light float-left my-3 mx-3 animate__animated animate__fadeInUp">{{form.name.label}}</label>
                 {{form.name|add_class:"text-dark fr form-control mx-3 animate__animated animate__fadeInUp"}}
-                <label class="h5 text-light float-left my-3 mx-3 animate__animated animate__fadeInUp">{{form.age.label}}</label>
+                <label class="orange h5 text-light float-left my-3 mx-3 animate__animated animate__fadeInUp">{{form.age.label}}</label>
                 {{form.age|add_class:"text-dark fr form-control mx-3 animate__animated animate__fadeInUp"}}
-                <label class="h5 text-light float-left my-3 mx-3 animate__animated animate__fadeInUp">{{form.sex.label}}</label>
+                <label class="orange h5 text-light float-left my-3 mx-3 animate__animated animate__fadeInUp">{{form.sex.label}}</label>
                 {{form.sex|add_class:"text-dark fr form-control mx-3 animate__animated animate__fadeInUp"}}
                 <button type="submit" class="scrollto animate__animated animate__fadeInU border-0 my-5 btn-get-started">Start Machine</button>
               </form>
