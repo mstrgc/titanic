@@ -1658,3 +1658,7 @@ section {
 .fr {
   border-radius: 50px !important;
 }
+
+.orange {
+  color : #ff7900 !important;
+}
