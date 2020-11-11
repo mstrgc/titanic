@@ -4,11 +4,19 @@
 <section id="intro">
 	<div class="intro-container">
 	  <div id="introCarousel" class="carousel slide carousel-fade" data-ride="carousel">
-        <div class="carousel-inner" role="listbox">
-        	<div class="carousel-item active" style="background-image: url({% static 'assets/img/intro-carousel/1.jpg' %})">
+      <div class="carousel-inner" role="listbox">
+        <div class="carousel-item active" style="background-image: url({% static 'assets/img/intro-carousel/1.jpg' %})">
         	<div class="carousel-container">
-            <div class="container row">
-	      			<p>:)</p>
+            <div class="container">
+            	<h3 class="text-center text-danger animate__animated animate__fadeInUp"><b>Will you die or will you survive?</b></h3>
+	      			<p class="my-2 animate__animated animate__fadeInUp">Your name is {{name}}</p>
+	      			<p class="my-2 animate__animated animate__fadeInUp">and</p>
+	      			<p class="my-2 animate__animated animate__fadeInUp">You are {{age}} years old</p>
+	      			<p class="my-2 animate__animated animate__fadeInUp">and</p>
+	      			<p class="my-2 animate__animated animate__fadeInUp">You are a {% if sex == 'Male' %}man{% else %}woman{% endif %}</p>
+	      			<br>
+	      			<p class="orange animate__animated animate__fadeInUp"><i>If you were on the Titanic you would be ...</i></p>
+	      			<h4 class="text-center animate__animated animate__fadeInUp"><b>machine answer</b></h4>
 	    			</div>
 	  			</div>
 				</div>
