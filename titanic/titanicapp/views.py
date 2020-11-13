@@ -2,7 +2,7 @@ from django.views.generic import CreateView
 from .forms import personform
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
-from extentions.ml_titan import got
+from extentions.ml_titan import ml
 
 def home(request):
     if request.method == 'POST':
@@ -17,13 +17,13 @@ def home(request):
     return render(request, 'home.html', {'form': form})
 
 def answer(request):
-	a = request.POST['age']
-	b = request.POST['sex']
+	aa = request.POST['age']
+	bb = request.POST['sex']
 	ct = {
 		'name' : request.POST['name'],
-		'age' : a,
-		'sex' : b,
-		'ad' : got(a, b)
+		'age' : aa,
+		'sex' : bb,
+		'ad' : ml(aa, bb),
 	}
 	return render(request, 'answer.html', ct)
 
