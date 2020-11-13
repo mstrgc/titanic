@@ -14,7 +14,7 @@ def home(request):
     else:
         form = personform()
 
-    return render(request, 'home.html', {'form': form})
+    return render(request, 'home.html', {'form': form,})
 
 def answer(request):
 	aa = request.POST['age']

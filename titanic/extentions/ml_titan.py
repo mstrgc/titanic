@@ -100,13 +100,13 @@ def ml(aa, bb):
     mean_predict=np.mean([predict_b_sex,predict_b_age])
     if mean_predict==1:
         #show in the page "you are survived"
-        return "fortnatly you survive"
+        return "a"
     elif mean_predict==0:
         #show in the page you are not survived
-        return "ufortnaltly you die"
+        return "d"
     else:
         #show in the page "it is fifty fifty "
-        return "it's fifty fifty"
+        return "f"
 
 
     # In[ ]:

@@ -16,7 +16,13 @@
 	      			<p class="my-2 animate__animated animate__fadeInUp">You are a {% if sex == 'Male' %}man{% else %}woman{% endif %}</p>
 	      			<br>
 	      			<p class="orange animate__animated animate__fadeInUp"><i>If you were on the Titanic you would be ...</i></p>
-	      			<h4 class="text-center animate__animated animate__fadeInUp"><b>{{ad}}</b></h4>
+	      			{% if ad == 'a' %}
+	      			<h4 class="text-center text-success animate__animated animate__fadeInUp"><b>fortunatly you survive</b></h4>
+	      			{% elif ad == 'd' %}
+	      			<h4 class="text-center text-danger animate__animated animate__fadeInUp"><b>unfortunatly you die</b></h4>
+	      			{% elif ad == 'f' %}
+	      			<h4 class="text-center text-warning animate__animated animate__fadeInUp"><b>it's fifty fifty</b></h4>
+	      			{% endif %}
 	    			</div>
 	  			</div>
 				</div>
