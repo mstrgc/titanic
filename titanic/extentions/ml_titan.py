@@ -107,6 +107,3 @@ def ml(aa, bb):
     else:
         #show in the page "it is fifty fifty "
         return "f"
-
-
-    # In[ ]:
