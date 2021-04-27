@@ -39,7 +39,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'titanicapp.apps.TitanicappConfig',
     'extentions',
-    #'widget_tweaks',
 ]
 
 MIDDLEWARE = [
