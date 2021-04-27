@@ -1,6 +1,6 @@
 from django import forms
 
-class personform(forms.Form):
+class PersonForm(forms.Form):
 	CHOICES = (('Male', "Male"),('Female', "Female"))
 	name = forms.CharField(
 		label="your name",

@@ -1,31 +1,31 @@
 from django.views.generic import CreateView
-from .forms import personform
+from .forms import PersonForm
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from extentions.ml_titan import ml
 
 def home(request):
     if request.method == 'POST':
-        form = personform(request.POST)
+        form = PersonForm(request.POST)
 
         if form.is_valid():
             return form.save()
 
     else:
-        form = personform()
+        form = PersonForm()
 
     return render(request, 'home.html', {'form': form,})
 
 def answer(request):
-	aa = request.POST['age']
-	bb = request.POST['sex']
-	ct = {
+	age = request.POST['age']
+	sex = request.POST['sex']
+	context = {
 		'name' : request.POST['name'],
-		'age' : aa,
-		'sex' : bb,
-		'ad' : ml(aa, bb),
+		'age' : age,
+		'sex' : sex,
+		'ad' : ml(age, sex),
 	}
-	return render(request, 'answer.html', ct)
+	return render(request, 'answer.html', context)
 
 def about(request):
 	return render(request, 'about.html')
