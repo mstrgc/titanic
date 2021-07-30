@@ -12,7 +12,6 @@ from sklearn.neighbors import KNeighborsClassifier
 # In[49]:
 
 def ml(aa, bb):
-    #دانیال این دوتا پایینی رو تعریف کن
     sex=bb
     age=aa
     def got_customer_age():
